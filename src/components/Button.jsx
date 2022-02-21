@@ -1,5 +1,5 @@
 import React from "react";
 
 export const Button = (props) => {
-  return <button>{props.buttonText}</button>;
+  return <button className="bttn">{props.buttonText}</button>;
 };
