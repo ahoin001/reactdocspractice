@@ -2,15 +2,15 @@ import React from "react";
 
 export const ListofItems = () => {
   const products = [
-    { title: "Cabbage", id: 1 },
-    { title: "Garlic", id: 2 },
-    { title: "Apple", id: 3 },
-    { title: "Carrot", id: 4 },
-    { title: "Grape", id: 5 },
+    { title: "Cabbage", isFruit: false, id: 1 },
+    { title: "Banana", isFruit: true, id: 2 },
+    { title: "Apple", isFruit: true, id: 3 },
+    { title: "Carrot", isFruit: false, id: 4 },
+    { title: "Orange", isFruit: true, id: 5 },
   ];
 
   const itemList = products.map((item) => (
-    <li key={item.id}>Item: {item.title}</li>
+    <li key={item.id} style={{color: item.isFruit ? "white" : "green"}}>Item: {item.title}</li>
   ));
 
   return (
